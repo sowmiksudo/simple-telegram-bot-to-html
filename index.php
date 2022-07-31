@@ -3,7 +3,6 @@
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.telegram.org/{bot_token}/getupdates');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
 $response = curl_exec($ch);
 
@@ -12,8 +11,6 @@ curl_close($ch);
 $json = json_decode($response);
 
 $messages = array_reverse($json->result);
-
-// die(json_encode($messages));
 
 $len = count($messages);
 
