@@ -72,7 +72,7 @@ if ($len > 10) {
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(() => {
                 location.reload()
-            }, 3000);
+            }, 5000);
         });
     </script>
 </body>
